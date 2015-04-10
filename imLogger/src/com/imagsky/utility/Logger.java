@@ -17,6 +17,7 @@ import java.util.Date;
 
   @author Jason Mak */
 
+
 public class Logger {
     private org.apache.log4j.Logger logger;
     

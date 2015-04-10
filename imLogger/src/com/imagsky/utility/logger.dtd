@@ -1,0 +1,13 @@
+<!ELEMENT logger (dest+, level?)>
+<!ELEMENT level EMPTY>
+<!ELEMENT dest (parm*, filter?, layout?)>
+<!ELEMENT parm EMPTY>
+<!ATTLIST logger reset (true | false) #REQUIRED>
+<!ATTLIST dest 
+   name ID #REQUIRED
+   type (FILE | SYSTEM_ERR | SYSTEM_OUT) #REQUIRED
+   rolling (DAILY | WEEKLY | MONTHLY) #IMPLIED>
+<!ATTLIST level value (ALL | DEBUG | INFO | WARN | ERROR | FATAL | OFF) #REQUIRED>
+<!ATTLIST parm 
+   name (File | BufferedIO | BufferSize) #REQUIRED
+   value CDATA #REQUIRED>
